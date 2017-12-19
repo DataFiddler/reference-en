@@ -22,7 +22,7 @@ This function is part of the Stream class, and is called by any class that inher
 
 [float]
 === Syntax
-`stream.readString(terminator)`
+`stream.readStringUntil(terminator)`
 
 
 [float]
@@ -31,7 +31,10 @@ This function is part of the Stream class, and is called by any class that inher
 
 [float]
 === Returns
-The entire string read from a stream, until the terminator character is detected.
+The entire string read from a stream, until the terminator character is detected.  (`String`)
+The terminator character is read and removed from the stream, but not included in the returned string.
+Everything eventually following the terminator character stays in the stream for future reading.
+
 
 --
 // OVERVIEW SECTION ENDS
